@@ -40,6 +40,6 @@ jobs:
       - name: Init and Plan Terraform ec2_key_pair_management
         run: |
           cd ec2_key_pair_management/terraform
-          terraform init
+          terraform init -reconfigure
           terraform validate
           terraform plan -var-file=../variables/terraform.tfvars
